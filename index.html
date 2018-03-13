@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+    <div id="introPage">
+        <div id="introText">
+            <p>Welcome to Hangman!</p>
+            <div id="buttonContainer">
+                <div id="sp" onclick="sp()">Let's Play</div>
+            </div>
+        </div>
+        <canvas id="homeHangman" width="300px" height="300px"></canvas>
+    </div>
+    <!-- Game menu -->
+    <div id="singlePage">
+        <p>Pick a category:</p>
+        <div id="categoryHolder">
+            <div id="category">
+                <div id="category1">
+                    <div id="sports" onclick="sport()">Sports</div>
+                    <div id="places" onclick="place()">Places</div>
+                    <div id="foods" onclick="food()">Foods</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- charater spaces -->
+    <div id="gamePage">
+        <p id="categoryName"></p>
+        <div id="wordWrap">
+            <div id="underline1">
+                <div id="letter1"></div>
+            </div>
+            <div id="underline2">
+                <div id="letter2"></div>
+            </div>
+            <div id="underline3">
+                <div id="letter3"></div>
+            </div>
+            <div id="underline4">
+                <div id="letter4"></div>
+            </div>
+            <div id="underline5">
+                <div id="letter5"></div>
+            </div>
+            <div id="underline6">
+                <div id="letter6"></div>
+            </div>
+            <div id="underline7">
+                <div id="letter7"></div>
+            </div>
+            <div id="underline8">
+                <div id="letter8"></div>
+            </div>
+            <div id="underline9">
+                <div id="letter9"></div>
+            </div>
+            <div id="underline10">
+                <div id="letter10"></div>
+            </div>
+            <div id="underline11">
+                <div id="letter11"></div>
+            </div>
+            <div id="underline12">
+                <div id="letter12"></div>
+            </div>
+            <div id="underline13">
+                <div id="letter13"></div>
+            </div>
+            <div id="underline14">
+                <div id="letter14"></div>
+            </div>
+            <div id="underline15">
+                <div id="letter15"></div>
+            </div>
+            <div id="underline16">
+                <div id="letter16"></div>
+            </div>
+            <div id="underline17">
+                <div id="letter17"></div>
+            </div>
+            <div id="underline18">
+                <div id="letter18"></div>
+            </div>
+            <div id="underline19">
+                <div id="letter19"></div>
+            </div>
+            <div id="underline20">
+                <div id="letter20"></div>
+            </div>
+            <div id="underline21">
+                <div id="letter21"></div>
+            </div>
+            <div id="underline22">
+                <div id="letter22"></div>
+            </div>
+            <div id="underline23">
+                <div id="letter23"></div>
+            </div>
+            <div id="underline24">
+                <div id="letter24"></div>
+            </div>
+            <div id="underline25">
+                <div id="letter25"></div>
+            </div>
+                </div>
+        <canvas id="hangman" width="300px" height="300px"></canvas>
+        <div id="results"></div>
+        <div id="letterBank">
+                <div id="a" value="A" onclick="guessLetter()">A</div><div id="b" value="B" onclick="guessLetter()">B</div><div id="c" value="C" onclick="guessLetter()">C</div><div id="d" value="D" onclick="guessLetter()">D</div><div id="e" value="E" onclick="guessLetter()">E</div><div id="f" value="F" onclick="guessLetter()">F</div><div id="g" value="G" onclick="guessLetter()">G</div><div id="h" value="H" onclick="guessLetter()">H</div><div id="i" value="I" onclick="guessLetter()">I</div><div id="j" value="J" onclick="guessLetter()">J</div><div id="k" value="K" onclick="guessLetter()">K</div><div id="l" value="L" onclick="guessLetter()">L</div><div id="m" value="M" onclick="guessLetter()">M</div><div id="n" value="N" onclick="guessLetter()">N</div><div id="o" value="O" onclick="guessLetter()">O</div><div id="p" value="P" onclick="guessLetter()">P</div><div id="q" value="Q" onclick="guessLetter()">Q</div><div id="r" value="R" onclick="guessLetter()">R</div><div id="s" value="S" onclick="guessLetter()">S</div><div id="t" value="T" onclick="guessLetter()">T</div><div id="u" value="U" onclick="guessLetter()">U</div><div id="v" value="V" onclick="guessLetter()">V</div><div id="w" value="W" onclick="guessLetter()">W</div><div id="x" value="X" onclick="guessLetter()">X</div><div id="y" value="Y" onclick="guessLetter()">Y</div><div id="z" value="Z" onclick="guessLetter()">Z</div>
+        <div id="again" onClick="reset()">Play again!</div>
+        <div id="home" onClick="window.location.reload()">Main menu</div>
+    </div>
+    <!-- <script type="text/javascript">
+        function autorun() {
+        }
+        if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+        else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+        else window.onload = autorun;
+    </script> -->
+</body>
+
+</html>
